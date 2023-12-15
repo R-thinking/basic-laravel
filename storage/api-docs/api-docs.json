@@ -1,0 +1,327 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "hojun API Docs",
+        "description": "Example API Documentation",
+        "contact": {
+            "name": "Email",
+            "email": "example@test.com"
+        },
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/users": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "get user list",
+                "description": "get user list",
+                "operationId": "4db02f0d9ccd97469981e0cb03d1a41e",
+                "requestBody": {
+                    "description": "user list",
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "description": "message",
+                                            "type": "string",
+                                            "example": "null"
+                                        },
+                                        "data": {
+                                            "properties": {
+                                                "users": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "properties": {
+                                                            "convertedID": {
+                                                                "description": "ID",
+                                                                "type": "integer",
+                                                                "example": "testID"
+                                                            },
+                                                            "convertedName": {
+                                                                "description": "이름",
+                                                                "type": "string",
+                                                                "example": "tester"
+                                                            },
+                                                            "convertedEmail": {
+                                                                "description": "이메일",
+                                                                "type": "string",
+                                                                "example": "tester@test.com"
+                                                            },
+                                                            "convertedPassword": {
+                                                                "description": "비밀번호",
+                                                                "type": "string",
+                                                                "example": "testPassword"
+                                                            },
+                                                            "convertedEmailVerifiedAt": {
+                                                                "description": "인증일",
+                                                                "type": "string",
+                                                                "example": "2023-12-14"
+                                                            },
+                                                            "convertedRememberToken": {
+                                                                "description": "토큰",
+                                                                "type": "string",
+                                                                "example": "eyjjspdkfksjoejlksjdf"
+                                                            },
+                                                            "createdAt": {
+                                                                "description": "생성일",
+                                                                "type": "string",
+                                                                "example": "2023-12-14"
+                                                            },
+                                                            "updatedAt": {
+                                                                "description": "변경일",
+                                                                "type": "string",
+                                                                "example": "2023-12-14"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    }
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Fail"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "create user list",
+                "description": "create user list",
+                "operationId": "7d60acdf8f517859f8766bac9d26b781",
+                "requestBody": {
+                    "description": "user information",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "user": {
+                                        "properties": {
+                                            "convertedID": {
+                                                "description": "ID",
+                                                "type": "integer",
+                                                "example": "testID"
+                                            },
+                                            "convertedName": {
+                                                "description": "이름",
+                                                "type": "string",
+                                                "example": "tester"
+                                            },
+                                            "convertedEmail": {
+                                                "description": "이메일",
+                                                "type": "string",
+                                                "example": "tester@test.com"
+                                            },
+                                            "convertedPassword": {
+                                                "description": "비밀번호",
+                                                "type": "string",
+                                                "example": "testPassword"
+                                            },
+                                            "convertedEmailVerifiedAt": {
+                                                "description": "인증일",
+                                                "type": "string",
+                                                "example": "2023-12-14"
+                                            },
+                                            "convertedRememberToken": {
+                                                "description": "토큰",
+                                                "type": "string",
+                                                "example": "eyjjspdkfksjoejlksjdf"
+                                            },
+                                            "createdAt": {
+                                                "description": "생성일",
+                                                "type": "string",
+                                                "example": "2023-12-14"
+                                            },
+                                            "updatedAt": {
+                                                "description": "변경일",
+                                                "type": "string",
+                                                "example": "2023-12-14"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "description": "message",
+                                            "type": "string",
+                                            "example": "null"
+                                        },
+                                        "data": {
+                                            "properties": {
+                                                "user": {
+                                                    "properties": {
+                                                        "convertedID": {
+                                                            "description": "ID",
+                                                            "type": "integer",
+                                                            "example": "testID"
+                                                        },
+                                                        "convertedName": {
+                                                            "description": "이름",
+                                                            "type": "string",
+                                                            "example": "tester"
+                                                        },
+                                                        "convertedEmail": {
+                                                            "description": "이메일",
+                                                            "type": "string",
+                                                            "example": "tester@test.com"
+                                                        },
+                                                        "convertedPassword": {
+                                                            "description": "비밀번호",
+                                                            "type": "string",
+                                                            "example": "testPassword"
+                                                        },
+                                                        "convertedEmailVerifiedAt": {
+                                                            "description": "인증일",
+                                                            "type": "string",
+                                                            "example": "2023-12-14"
+                                                        },
+                                                        "convertedRememberToken": {
+                                                            "description": "토큰",
+                                                            "type": "string",
+                                                            "example": "eyjjspdkfksjoejlksjdf"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Fail"
+                    }
+                }
+            }
+        },
+        "/api/users/{userID}": {
+            "put": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "update user",
+                "description": "update user",
+                "operationId": "0b0a634a8c385562974fe6b834ab0f0c",
+                "parameters": [
+                    {
+                        "name": "userID",
+                        "in": "path",
+                        "description": "유저 ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "example": "2"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "update information",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "convertedName": {
+                                        "description": "이름",
+                                        "type": "string",
+                                        "example": "tester"
+                                    },
+                                    "convertedEmail": {
+                                        "description": "이메일",
+                                        "type": "string",
+                                        "example": "tester2@test.com"
+                                    },
+                                    "convertedPassword": {
+                                        "description": "비밀번호",
+                                        "type": "string",
+                                        "example": "testPassword"
+                                    },
+                                    "convertedEmailVerifiedAt": {
+                                        "description": "인증일",
+                                        "type": "string",
+                                        "example": "2023-12-14"
+                                    },
+                                    "convertedRememberToken": {
+                                        "description": "토큰",
+                                        "type": "string",
+                                        "example": "eyjjspdkfksjoejlksjdf"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "description": "Fail"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "delete user",
+                "description": "delete user",
+                "operationId": "1c330e7e950d54a6e6e1bd1b1f2756e2",
+                "parameters": [
+                    {
+                        "name": "userID",
+                        "in": "path",
+                        "description": "유저 ID",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "example": "2"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "description": "Fail"
+                    }
+                }
+            }
+        }
+    }
+}
