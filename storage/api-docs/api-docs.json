@@ -10,6 +10,66 @@
         "version": "0.1"
     },
     "paths": {
+        "/auth/login": {
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "get user list",
+                "description": "get user list",
+                "operationId": "b6e84072e9c6286fafe08cfe9baf3b4f",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "description": "message",
+                                            "type": "string",
+                                            "example": "null"
+                                        },
+                                        "data": {
+                                            "properties": {
+                                                "users": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "properties": {
+                                                            "access_token": {
+                                                                "description": "ID",
+                                                                "type": "integer",
+                                                                "example": "testID"
+                                                            },
+                                                            "token_type": {
+                                                                "description": "이름",
+                                                                "type": "string",
+                                                                "example": "tester"
+                                                            },
+                                                            "expires_in": {
+                                                                "description": "이메일",
+                                                                "type": "string",
+                                                                "example": "tester@test.com"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    }
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Fail"
+                    }
+                }
+            }
+        },
         "/api/users": {
             "get": {
                 "tags": [
@@ -18,10 +78,6 @@
                 "summary": "get user list",
                 "description": "get user list",
                 "operationId": "4db02f0d9ccd97469981e0cb03d1a41e",
-                "requestBody": {
-                    "description": "user list",
-                    "required": true
-                },
                 "responses": {
                     "200": {
                         "description": "Success",
@@ -96,7 +152,12 @@
                     "400": {
                         "description": "Fail"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
             },
             "post": {
                 "tags": [
@@ -321,6 +382,18 @@
                         "description": "Fail"
                     }
                 }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "description": "Authorization",
+                "name": "Authorization",
+                "in": "header",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
             }
         }
     }

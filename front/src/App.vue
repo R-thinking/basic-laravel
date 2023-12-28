@@ -44,7 +44,16 @@ export default {
                 .then((res) => console.log(res));
         };
 
-        return { getData, createData, updateData, deleteData, userList };
+        const login = async () => {
+            await axios
+                .post("/api/auth/login", {
+                    email: "tester@test.com",
+                    password: "12345678",
+                })
+                .then((res) => console.log(res));
+        };
+
+        return { getData, createData, updateData, deleteData, userList, login };
     },
     async created() {},
 };
@@ -58,6 +67,7 @@ export default {
             <button @click="createData">Create Data</button>
             <button @click="updateData">Update Data</button>
             <button @click="deleteData">Delete Data</button>
+            <button @click="login">Login</button>
         </div>
         <table>
             <tr>

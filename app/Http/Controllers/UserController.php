@@ -8,16 +8,16 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    
+
     /**
+     * 
      * @OA\Get (
      *     path="/api/users",
      *     tags={"User"},
      *     summary="get user list",
      *     description="get user list",
-     *     @OA\RequestBody(
-     *         description="user list",
-     *         required=true,
-     *     ),
+     *     security={{"bearerAuth":{}}},
      *     @OA\Response(response="200", description="Success",
      *      @OA\MediaType(
      *             mediaType="application/json",

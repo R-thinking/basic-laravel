@@ -14,6 +14,16 @@ use Illuminate\Routing\Controller as BaseController;
 *         name="Email"
 *     )
 * )
+* 
+* @OA\SecurityScheme(
+*     securityScheme="bearerAuth",
+*     description="Authorization",
+*     name="Authorization",
+*     in="header",
+*     type="http",
+*     scheme="bearer",
+*     bearerFormat="JWT",
+* )
 */
 class Controller extends BaseController
 {
